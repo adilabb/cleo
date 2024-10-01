@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleo Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #006241;
+            --secondary-color: #1E3932;
+            --accent-color: #D4E9E2;
+            --text-color: #1E3932;
+            --background-color: #ffffff;
+            --light-green: #D4E9E2;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--background-color);
+            text-decoration: none;
+        }
+        nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: var(--background-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        .hero {
+            background-image: url('hero.jpg?height=700&width=800');
+            background-size: cover;
+            background-position: center;
+            color: var(--background-color);
+            text-align: center;
+            padding: 6rem 1rem;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .hero-image {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 0.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: var(--secondary-color);
+        }
+        .section {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        .featured {
+            background-color: var(--light-green);
+        }
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item {
+            flex: 0 0 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .menu-item {
+            background-color: var(--background-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .menu-item img {
+            max-width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+        .menu-item h3 {
+            margin: 1rem 0 0.5rem;
+            color: var(--primary-color);
+        }
+        .menu-item p {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            display: none;
+        }
+        .carousel-control:hover {
+            background-color: var(--secondary-color);
+        }
+        .carousel-control-prev {
+            left: 10px;
+        }
+        .carousel-control-next {
+            right: 10px;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .about-text {
+            max-width: 500px;
+            text-align: left;
+        }
+        .contact {
+            background-color: var(--light-green);
+        }
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2rem;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+        }
+        .contact input, .contact textarea {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-info {
+            text-align: left;
+        }
+
+        .social-media {
+            background-color: var(--light-green);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .social-media h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .social-icon {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .social-icon:hover {
+            background-color: var(--secondary-color);
+        }
+
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        footer nav {
+            margin: 1rem 0;
+        }
+        footer a {
+            color: var(--background-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        footer a:hover {
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .section {
+                padding: 3rem 1rem;
+            }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .menu-item-large img {
+                height: 150px;
+            }
+            .carousel-item {
+                padding: 0.5rem;
+            }
+            .menu-item {
+                padding: 1rem;
+            }
+            .menu-item img {
+                width: 300px;
+                height: 300px;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .about-image {
+                max-width: 100%;
+            }
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact form, .contact-info {
+                width: 100%;
+            }
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .menu-item-large {
+            background-color: var(--background-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        
+        .menu-item-large img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .menu-item-large h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-item-large p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-item-large .price {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <a href="#" class="logo" aria-label="Cleo Cafe Home">Cleo Cafe</a>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header> -->
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <!-- <h1>Experience Cleo Cafe</h1> -->
+                <img src="logo.png" alt="Cleo Cafe Logo" class="hero-image" style="width: 300px; height: auto;">
+                
+                <!-- <p>Indulge in our artisanal coffee and exquisite pastries, crafted with passion in a cozy, welcoming environment.</p> -->
+               
+            </div>
+        </section>
+
+        <section id="menu" class="section featured">
+            <!-- <h2>Featured Items</h2> -->
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class="menu-item">
+                            <img src="Cleo Menu Pics/IMG-20240923-WA0005.jpg?height=400&width=400" alt="Samosas" width="400" height="400">
+                            <h3>Samosas</h3>
+                            <!-- <p>$4.95</p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="menu-item">
+                            <img src="Cleo Menu Pics/IMG-20240923-WA0007.jpg?height=400&width=400" alt="Continental Breakfast" width="400" height="400">
+                            <h3>Continental Breakfast</h3>
+                            <!-- <p>$3.25</p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="menu-item">
+                            <img src="Cleo Menu Pics/IMG-20240923-WA0008.jpg?height=400&width=400" alt="Assorted Premium Sandwiches" width="400" height="400">
+                            <h3>Assorted Premium Sandwiches</h3>
+                            <!-- <p>$4.75</p> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="menu-item">
+                            <img src="Cleo Menu Pics/IMG-20240923-WA0011.jpg?height=600&width=600" alt="Complete Lunch" width="600" height="600">
+                            <h3>Complete Lunch</h3>
+                            <!-- <p>$3.50</p> -->
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control carousel-control-prev" aria-label="Previous item">&lt;</button>
+                <button class="carousel-control carousel-control-next" aria-label="Next item">&gt;</button>
+            </div>
+        </section>
+
+
+        <section id="menu" class="section">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/lunch.webp?height=200&width=300" alt="Complete Lunch">
+                    <h3>Complete Lunch</h3>
+                    <p>Experience our Complete Lunch spread: a delightful array of flavors and textures. Artisanal cheeses and cured meats mingle with vibrant salads and fresh fruits. Crisp vegetables, assorted breads, and savory nibbles offer something for every palate. This carefully curated selection provides a satisfying meal that's perfect for casual gatherings or elegant affairs, all beautifully presented to stimulate both appetite and conversation.</p>
+                    <p class="price">$21.95/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/sandwiches.webp?height=200&width=300" alt="Assorted Premium Sandwiches">
+                    <h3>Assorted Premium Sandwiches</h3>
+                    <p>
+                        Our selection of premium sandwiches features a variety of delicious options, including Corned Beef, Roast Beef, and Roast Turkey for classic tastes. For a touch of variety, enjoy Grilled Mesquite Chicken Breast, Deli Ham & Cheese, or Albacore Tuna. We also offer flavorful vegetarian choices like Roast Vegetable & Hummus, Smoked Salmon, and Falafel, ensuring there's something for everyone to enjoy.
+                    </p>
+                    <p class="price">$11.95/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/salad.webp?height=200&width=300" alt="Salad Bowls">
+                    <h3>Salad Bowls</h3>
+                    <p> Discover our trio of garden-fresh delights: the Vibrant Garden Medley, bursting with crisp vegetables; the Seasonal Fruit Sunshine Bowl, balancing sweet and savory flavors; and the Roasted Veggie Harvest Salad, offering warmth and comfort. Each bowl showcases locally-sourced, organic ingredients at their peak. Our salads aren't just meals – they're a celebration of health and flavor, packed with nutrients and taste in every bite.</p>
+                    <p class="price">$6.00/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/sweets.webp?height=200&width=300" alt="Mixed Sweets Platter">
+                    <h3>Mixed Sweets Platter</h3>
+                    <p>Indulge in our Mixed Sweets Platter: a delightful assortment of treats to satisfy every craving. Enjoy freshly baked cookies, rich and decadent squares, artisanal fruit tarts, and elegant petit fours. Each handcrafted piece offers a perfect balance of flavors and textures. From classic favorites to unique creations, this carefully curated selection promises a delicious journey through a world of sweetness.</p>
+                    <p class="price">$6.00/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/breakfast.webp?height=200&width=300" alt="Breakfast Platter">
+                    <h3>Breakfast Platter</h3>
+                    <p>Wake up to our Deluxe Continental Breakfast, featuring a vibrant array of fresh, seasonal fruits. Start your day with a refreshing medley of hand-selected berries, crisp apples, juicy citrus, and tropical delights. Accompanied by an assortment of freshly baked pastries, artisanal breads, and premium coffee, our breakfast offers a perfect balance of health and indulgence to energize your morning.</p>
+                    <p class="price">$12.95/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/breakfast.webp?height=200&width=300" alt="Healthy Light Breakfast">
+                    <h3>Healthy Light Breakfast</h3>
+                    <p>Savor our artisanal breakfast bread selection, each slice a perfect balance of flavor and wholesome goodness. Choose from zesty lemon, bursting with antioxidant-rich blueberries, vitamin-packed carrot, or aromatic apple spice. These light, nutritious options provide a delicious way to fuel your day, combining the comfort of homemade breads with the benefits of carefully chosen ingredients.</p>
+                    <p class="price">$5.00/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/IMG-20240923-WA0016.jpg?height=200&width=300" alt="Breakfast Assorted Pastry Platter">
+                    <h3>Breakfast Assorted Pastry Platter</h3>
+                    <p>Delight in our carefully curated Breakfast Assorted Pastry Platter, a tantalizing array of sweet and savory treats to start your day. Savor buttery croissants, rich chocolate cookies, and delectable fruit-studded bars. Our selection includes zesty lemon squares, decadent brownies, and classic chocolate chip cookies. For a touch of freshness, we garnish the platter with vibrant strawberry slices, juicy orange wedges, and crisp green grapes.</p>
+                    <p class="price">$7/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/fruit.webp?height=200&width=300" alt="Fresh Fruit Platter">
+                    <h3>Fresh Fruit Platter</h3>
+                    <p>Indulge in our vibrant Fresh Fruit Platter, a colorful celebration of nature's sweetness. Juicy watermelon slices, golden pineapple spears, and succulent mango chunks form a refreshing base. Crisp green grapes and plump strawberries add bursts of flavor, while a whole pineapple crown serves as a stunning centerpiece. This beautifully arranged medley of seasonal fruits offers a perfect balance of textures and tastes, ideal for any occasion from breakfast to dessert.</p>
+                    <p class="price">$8.00/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/veggie.webp?height=200&width=300" alt="Veggie Platter">
+                    <h3>Veggie Platter</h3>
+                    <p>Savor our vibrant Veggie Platter, a combo of fresh and roasted delights. Crisp purple cabbage and juicy tomato wedges pop against a bed of leafy greens. Sweet carrot slivers and char-grilled zucchini add depth and smoky notes. Scattered throughout are tender roasted bell peppers, offering a rich, caramelized flavor. This colorful medley celebrates the season's best, delivering a symphony of textures and tastes in every forkful. </p>
+                    <p class="price">$8.50/person</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/hotmeals.webp?height=200&width=300" alt="HOT MEALS">
+                    <h3>HOT MEALS</h3>
+                    <p>From intimate gatherings to grand celebrations, we offer personalized hot meal solutions to suit your unique tastes and dietary needs. Our culinary team is eager to bring your ideas to life, whether it's a themed dinner, multicourse feast, or innovative fusion cuisine. We accommodate parties of 12 or more, ensuring each guest enjoys a memorable, freshly prepared meal. Reach out to start planning your bespoke culinary journey – your vision, our expertise.</p>
+                </div>
+                <div class="menu-item-large">
+                    <img src="Cleo Menu Pics/drinks.webp?height=200&width=300" alt="Hot and Cold Drinks">
+                    <h3>Hot and Cold Drinks</h3>
+                    <p>Coffee/Cold drink service</p>
+                    <p class="price">$2.50/person</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- <section id="about" class="section">
+            <h2>Our Story</h2>
+            <div class="about-content">
+                <img src="story.avif" alt="Cafe Interior" width="600" height="400" class="about-image">
+                <div class="about-text">
+                    <p>At Cleo Cafe, we believe in the power of a perfect cup of coffee to brighten your day. Since 2010, we've been serving our community with passion and dedication, sourcing only the finest beans and ingredients.</p>
+                    <p>Our skilled baristas craft each beverage with care, ensuring a consistent and delightful experience with every visit. Whether you're looking for a quick pick-me-up or a place to relax and connect, Cleo Cafe is your home away from home.</p>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="contact" class="section contact">
+            <h2>Connect With Us</h2>
+            <p>We'd love to hear from you. Reach out for questions, feedback, or to place an order.</p>
+            <div class="contact-content">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit" class="button">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Visit Us</h3>
+                    <p>2&8 Prologies Blvd, Mississauga</p>
+                    <p>Open daily: 6am - 9pm</p>
+                    <p>Phone: (416) 417-0530</p>
+                    <p>Email: jon@jondinizfinefoods.com</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-media">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <p>&copy; 2024 Cleo Cafe. All rights reserved.</p>
+        <nav>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Careers</a>
+        </nav>
+        <div>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+    </footer> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel-inner');
+            const items = carousel.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.carousel-control-prev');
+            const nextBtn = document.querySelector('.carousel-control-next');
+            let currentIndex = 0;
+
+            function showItem(index) {
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function showNext() {
+                currentIndex = (currentIndex + 1) % items.length;
+                showItem(currentIndex);
+            }
+
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showItem(currentIndex);
+            }
+
+            prevBtn.addEventListener('click', showPrev);
+            nextBtn.addEventListener('click', showNext);
+
+            // Optional: Auto-play
+            setInterval(showNext, 2000);
+        });
+    </script>
+</body>
+</html>
