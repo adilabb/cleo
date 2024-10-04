@@ -80,10 +80,9 @@
         text-align: center;
       }
       p {
-        text-align: justify;
+       padding: 10px;
         margin-bottom: 1rem;
         
-        hyphens: auto;
       }
       .qr-code {
         max-width: 450px;
@@ -196,24 +195,14 @@
       }
 
 
-      /* Add this new media query for smaller screens */
-      @media (max-width: 768px) {
-        .container {
-          padding: 0 0.5rem;
-        }
-        .left-column,
-        .right-column {
-          padding: 1rem 0.5rem;
-        }
-
-      }
-
 
       /* Modify this media query */
       @media (max-width: 1200px) {
         .container {
           flex-direction: column;
           padding: 0 1rem;
+          max-width: 100%;
+          margin: 0 auto;
         }
         .left-column,
         .right-column {
@@ -228,11 +217,12 @@
 
 
       /* Add this new media query for very small screens */
-      @media (max-width: 500px) {
+      /* @media (max-width: 500px) {
         .container {
           padding: 0 0.25rem;
         }
         .left-column{
+          margin-right: 400px;
           padding: 1rem 5rem 1rem 5rem;
         }
         .right-column {
@@ -240,6 +230,7 @@
         }
         .food-grid {
           grid-template-columns: repeat(1, 1fr);
+          
         }
         h1, h2 {
           font-size: 1.2rem;
@@ -247,7 +238,7 @@
         p {
           font-size: 0.9rem;
         }
-      }
+      } */
     </style>
   </head>
   <body>
@@ -256,7 +247,7 @@
         <div>
           <div class="logo-container">
             <img
-              src="logo.jpg?height=300&width=300"
+              src="logo.jpg"
               alt="Cafe Cleo Logo"
               class="logo"
             />
@@ -283,6 +274,8 @@
             <h2>Business Catering With Personal Touch...</h2>
           </div>
           <p>
+
+           
             Turn your business event into an extraordinary experience with Cafe
             Cleo's catering services. From elegant corporate luncheons to
             flawless presentations, we handle every detail with perfection.
@@ -315,117 +308,117 @@
         <div class="food-grid">
           <!-- Appetizers and Platters -->
           <img
-            src="Cleo Menu Pics\landing\appetrizer.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\appetrizer.jpg"
             alt="Appetizer platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\platter.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\platter.jpg"
             alt="Food platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\skewers.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\skewers.jpg"
             alt="Food skewers"
             class="food-item"
           />
           
           <!-- Sandwiches and Wraps -->
           <img
-            src="Cleo Menu Pics\landing\mini sandwich.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\mini sandwich.jpg"
             alt="Mini sandwiches"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\sandwich.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\sandwich.jpg"
             alt="Sandwich platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\wraps ham.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\wraps ham.jpg"
             alt="Ham wraps"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\wraps.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\wraps.jpg"
             alt="Assorted wraps"
             class="food-item"
           />
           
           <!-- Pastries and Baked Goods -->
           <img
-            src="Cleo Menu Pics\landing\assorted pastries.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\assorted pastries.jpg"
             alt="Assorted pastries"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\crossiant.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\crossiant.jpg"
             alt="Croissants"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\crossiant2.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\crossiant2.jpg"
             alt="Croissants"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\muffins.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\muffins.jpg"
             alt="Assorted muffins"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\pastries.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\pastries.jpg"
             alt="Assorted pastries"
             class="food-item"
           />
           
           <!-- Fruits and Fruit Platters -->
           <img
-            src="Cleo Menu Pics\landing\fruits.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\fruits.jpg"
             alt="Fresh fruit platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\pastries and fruits.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\pastries and fruits.jpg"
             alt="Pastries and fruits platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\fruits and bread.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\fruits and bread.jpg"
             alt="Fruits and bread platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\fruits platter 2.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\fruits platter 2.jpg"
             alt="Fruit platter"
             class="food-item"
           />
           
           <!-- Desserts -->
           <img
-            src="Cleo Menu Pics\landing\brownies.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\brownies.jpg"
             alt="Chocolate brownies"
             class="food-item"
           />
           
           <!-- Savory Items -->
           <img
-            src="Cleo Menu Pics\landing\quinch.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\quinch.jpg"
             alt="Quiche"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\samosa.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\samosa.jpg"
             alt="Samosas"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\veggie samoas.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\veggie samoas.jpg"
             alt="Vegetable samosas"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\parathas.jpg?height=300&width=300"
+            src="Cleo Menu Pics\landing\parathas.jpg"
             alt="Parathas"
             class="food-item"
           />
