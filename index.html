@@ -82,8 +82,7 @@
       p {
         text-align: justify;
         margin-bottom: 1rem;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        
         hyphens: auto;
       }
       .qr-code {
@@ -189,11 +188,27 @@
           box-sizing: border-box;
         }
         .food-grid {
-          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          /* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+          grid-template-columns: repeat(2, 1fr);
           gap: 0.25rem;
           padding: 0.25rem;
         }
       }
+
+
+      /* Add this new media query for smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 0.5rem;
+        }
+        .left-column,
+        .right-column {
+          padding: 1rem 0.5rem;
+        }
+
+      }
+
+
       /* Modify this media query */
       @media (max-width: 1200px) {
         .container {
@@ -211,26 +226,15 @@
         }
       }
 
-      /* Add this new media query for smaller screens */
-      @media (max-width: 768px) {
-        .container {
-          padding: 0 0.5rem;
-        }
-        .left-column,
-        .right-column {
-          padding: 1rem 0.5rem;
-        }
-        .food-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
 
       /* Add this new media query for very small screens */
       @media (max-width: 500px) {
         .container {
           padding: 0 0.25rem;
         }
-        .left-column,
+        .left-column{
+          padding: 1rem 5rem 1rem 5rem;
+        }
         .right-column {
           padding: 1rem 0.25rem;
         }
