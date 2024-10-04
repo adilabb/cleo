@@ -11,7 +11,7 @@
         padding: 0;
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        background-color: #F7F7F7;
+        background-color: #f7f7f7;
         width: 100%;
       }
       .container {
@@ -86,7 +86,7 @@
         /* position: absolute; */
         top: 0.5rem;
         right: 0.5rem;
-        background-color: #FF6347;
+        background-color: #ff6347;
         color: white;
         border: none;
         padding: 0.5rem 1rem;
@@ -99,27 +99,27 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
         z-index: 10;
-    }
+      }
 
-    .catering-menu-btn:hover {
-        background-color: #FF7F50;
+      .catering-menu-btn:hover {
+        background-color: #ff7f50;
         transform: translateY(-2px);
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
+      }
 
-    .catering-menu-btn:active {
+      .catering-menu-btn:active {
         transform: translateY(0);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+      }
 
-    @media (max-width: 768px) {
+      @media (max-width: 768px) {
         .catering-menu-btn {
-            top: 0.5rem;
-            right: 0.5rem;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
+          top: 0.5rem;
+          right: 0.5rem;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
         }
-    }
+      }
       .food-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -172,23 +172,23 @@
         .container {
           flex-direction: column;
         }
-        .left-column{
-            flex: none;
-            width: 100%;
-            margin-left: 3rem;
-            margin-right: 3rem;
-            padding: 5rem;
-            box-sizing: border-box;
+        .left-column {
+          flex: none;
+          width: 100%;
+          margin-left: 3rem;
+          margin-right: 3rem;
+          padding: 5rem;
+          box-sizing: border-box;
         }
         .right-column {
-            flex: none;
-            width: 100%;
-            padding: 1rem;
-            box-sizing: border-box;
+          flex: none;
+          width: 100%;
+          padding: 1rem;
+          box-sizing: border-box;
         }
         .food-grid {
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 0.25rem;
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 0.25rem;
         }
       }
     </style>
@@ -222,7 +222,9 @@
             guests, making Cafe Cleo the perfect choice for businesses seeking
             exceptional catering that aligns with their professional needs.
           </p>
-          <div class="shadow"><h2>Business Catering With Personal Touch...</h2></div>
+          <div class="shadow">
+            <h2>Business Catering With Personal Touch...</h2>
+          </div>
           <p>
             Turn your business event into an extraordinary experience with Cafe
             Cleo's catering services. From elegant corporate luncheons to
@@ -242,54 +244,22 @@
         </div>
       </div>
       <div class="right-column">
-        <div style="text-align: center; padding-top: 1rem; padding-bottom: 1rem;">
-            <button class="catering-menu-btn" onclick="window.location.href='menu.html'" style="font-size: 1.2em;">CATERING MENU</button>
+        <div
+          style="text-align: center; padding-top: 1rem; padding-bottom: 1rem"
+        >
+          <button
+            class="catering-menu-btn"
+            onclick="window.location.href='menu.html'"
+            style="font-size: 1.2em"
+          >
+            CATERING MENU
+          </button>
         </div>
         <div class="food-grid">
+          <!-- Appetizers and Platters -->
           <img
             src="Cleo Menu Pics\landing\appetrizer.jpg?height=300&width=300"
             alt="Appetizer platter"
-            class="food-item"
-          />
-
-          <img
-            src="Cleo Menu Pics\landing\assorted pastries.jpg?height=300&width=300"
-            alt="Assorted pastries"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\brownies.jpg?height=300&width=300"
-            alt="Chocolate brownies"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\crossiant.jpg?height=300&width=300"
-            alt="Croissants"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\fruits.jpg?height=300&width=300"
-            alt="Fresh fruit platter"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\mini sandwich.jpg?height=300&width=300"
-            alt="Mini sandwiches"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\muffins.jpg?height=300&width=300"
-            alt="Assorted muffins"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\pastries and fruits.jpg?height=300&width=300"
-            alt="Pastries and fruits platter"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\pastries.jpg?height=300&width=300"
-            alt="Assorted pastries"
             class="food-item"
           />
           <img
@@ -298,28 +268,20 @@
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\quinch.jpg?height=300&width=300"
-            alt="Quiche"
+            src="Cleo Menu Pics\landing\skewers.jpg?height=300&width=300"
+            alt="Food skewers"
             class="food-item"
           />
+          
+          <!-- Sandwiches and Wraps -->
           <img
-            src="Cleo Menu Pics\landing\samosa.jpg?height=300&width=300"
-            alt="Samosas"
+            src="Cleo Menu Pics\landing\mini sandwich.jpg?height=300&width=300"
+            alt="Mini sandwiches"
             class="food-item"
           />
           <img
             src="Cleo Menu Pics\landing\sandwich.jpg?height=300&width=300"
             alt="Sandwich platter"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\skewers.jpg?height=300&width=300"
-            alt="Food skewers"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\veggie samoas.jpg?height=300&width=300"
-            alt="Vegetable samosas"
             class="food-item"
           />
           <img
@@ -332,6 +294,90 @@
             alt="Assorted wraps"
             class="food-item"
           />
+          
+          <!-- Pastries and Baked Goods -->
+          <img
+            src="Cleo Menu Pics\landing\assorted pastries.jpg?height=300&width=300"
+            alt="Assorted pastries"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\crossiant.jpg?height=300&width=300"
+            alt="Croissants"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\crossiant2.jpg?height=300&width=300"
+            alt="Croissants"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\muffins.jpg?height=300&width=300"
+            alt="Assorted muffins"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\pastries.jpg?height=300&width=300"
+            alt="Assorted pastries"
+            class="food-item"
+          />
+          
+          <!-- Fruits and Fruit Platters -->
+          <img
+            src="Cleo Menu Pics\landing\fruits.jpg?height=300&width=300"
+            alt="Fresh fruit platter"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\pastries and fruits.jpg?height=300&width=300"
+            alt="Pastries and fruits platter"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\fruits and bread.jpg?height=300&width=300"
+            alt="Fruits and bread platter"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\fruits platter 2.jpg?height=300&width=300"
+            alt="Fruit platter"
+            class="food-item"
+          />
+          
+          <!-- Desserts -->
+          <img
+            src="Cleo Menu Pics\landing\brownies.jpg?height=300&width=300"
+            alt="Chocolate brownies"
+            class="food-item"
+          />
+          
+          <!-- Savory Items -->
+          <img
+            src="Cleo Menu Pics\landing\quinch.jpg?height=300&width=300"
+            alt="Quiche"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\samosa.jpg?height=300&width=300"
+            alt="Samosas"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\veggie samoas.jpg?height=300&width=300"
+            alt="Vegetable samosas"
+            class="food-item"
+          />
+          <img
+            src="Cleo Menu Pics\landing\parathas.jpg?height=300&width=300"
+            alt="Parathas"
+            class="food-item"
+          />
+          <!-- <img
+            src="Cleo Menu Pics\landing\fruits platter.jpg?height=300&width=300"
+            alt="Assorted fruit platter"
+            class="food-item"
+          /> -->
+
 
           <!-- <img src="/placeholder.svg?height=300&width=300" alt="Appetizers on a platter" class="food-item">
                 <img src="/placeholder.svg?height=300&width=300" alt="Mini quiches" class="food-item">
