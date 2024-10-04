@@ -19,10 +19,11 @@
         min-height: 100vh;
         max-width: 100%;
         box-sizing: border-box;
+        padding: 0 2rem; /* Add this line */
       }
       .left-column {
         flex: 1;
-        padding: 2rem;
+        padding: 2rem 2rem 2rem 0; /* Modify this line */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -59,6 +60,7 @@
       .right-column {
         flex: 2;
         position: relative;
+        padding-left: 2rem; /* Add this line */
       }
       .logo {
         max-width: 300px;
@@ -171,24 +173,26 @@
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
+          padding: 0 1rem; /* Add this line */
         }
         .left-column {
           flex: none;
           width: 100%;
-          margin-left: 3rem;
-          margin-right: 3rem;
-          padding: 5rem;
+          margin-left: 0;
+          margin-right: 0;
+          padding: 1rem 0; /* Modify this line */
           box-sizing: border-box;
         }
         .right-column {
           flex: none;
           width: 100%;
-          padding: 1rem;
+          padding: 0;
           box-sizing: border-box;
         }
         .food-grid {
           grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
           gap: 0.25rem;
+          padding: 0.25rem;
         }
       }
     </style>
@@ -372,24 +376,6 @@
             alt="Parathas"
             class="food-item"
           />
-          <!-- <img
-            src="Cleo Menu Pics\landing\fruits platter.jpg?height=300&width=300"
-            alt="Assorted fruit platter"
-            class="food-item"
-          /> -->
-
-
-          <!-- <img src="/placeholder.svg?height=300&width=300" alt="Appetizers on a platter" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Mini quiches" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Finger sandwiches" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Fruit and cheese platter" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Assorted pastries" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Salad bowls" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Gourmet sandwiches" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Appetizer spread" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Dessert platter" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Fresh fruit display" class="food-item">
-                <img src="/placeholder.svg?height=300&width=300" alt="Assorted desserts" class="food-item"> -->
         </div>
       </div>
     </div>
