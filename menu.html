@@ -144,6 +144,12 @@
       .menu-item h3 {
         margin: 1rem 0 0.5rem;
         color: var(--primary-color);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.3rem;
+        display: inline-block;
       }
       .menu-item p {
         font-weight: bold;
@@ -348,6 +354,26 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .action-word {
+        font-weight: bold;
+        color: var(--secondary-color);
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
     </style>
   </head>
   <body>
@@ -359,7 +385,7 @@
             src="logo.png"
             alt="Cleo Cafe Logo"
             class="hero-image"
-            style="width: 300px; height: auto"
+            style="width: 400px; height: auto"
           />
         </div>
       </section>
@@ -377,7 +403,7 @@
                   height="400"
                 />
                 <h3>Continental Breakfast</h3>
-                <!-- <p>$3.25</p> -->
+                <p class="action-word">Fresh & Delightful!</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -389,7 +415,7 @@
                   height="400"
                 />
                 <h3>Assorted Gourmet Sandwiches</h3>
-                <!-- <p>$4.75</p> -->
+                <p class="action-word">Irresistibly Tasty!</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -401,7 +427,7 @@
                   height="600"
                 />
                 <h3>Complete Lunch</h3>
-                <!-- <p>$3.50</p> -->
+                <p class="action-word">Satisfyingly Delicious!</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -413,7 +439,7 @@
                   height="400"
                 />
                 <h3>Pastries</h3>
-                <!-- <p>$4.95</p> -->
+                <p class="action-word">Mouthwateringly Good!</p>
               </div>
             </div>
           </div>
@@ -462,11 +488,9 @@
             <p>
               The assorted gourmet sandwiches package offers a delicious variety
               of high-quality sandwiches, each crafted with fresh and flavorful
-              ingredients. This package is complemented by value-added items,
-              including a selection of crisp salads and an assortment of sweet
-              platters, creating a well-rounded and satisfying meal experience.
+              ingredients. These gourmet sandwiches are a satisfying meal experience.
               Perfect for any gathering, this offering ensures that all guests
-              enjoy a mix of savory and sweet flavors, catering to diverse
+              enjoy a mix of savory flavors, catering to diverse
               tastes.
             </p>
             <p class="price">$11.95/person</p>
@@ -485,7 +509,7 @@
               high-quality, fresh ingredients, providing a wholesome and
               refreshing addition to your meal.
             </p>
-            <p class="price">$6.00/person</p>
+            <p class="price">$7.00/person</p>
           </div>
           <div class="menu-item-large">
             <img
@@ -500,17 +524,17 @@
               delightful variety ensures there's something to satisfy every
               sweet tooth.
             </p>
-            <p class="price">$6.00/person</p>
+            <p class="price">$7.00/person</p>
           </div>
           <div class="menu-item-large">
             <img
               src="Cleo Menu Pics/IMG-20240923-WA0008.jpg?height=200&width=300"
               alt="Breakfast Platter"
             />
-            <h3>Breakfast Platter</h3>
+            <h3>Complete Breakfast Platter</h3>
             <p>
               Our breakfast platter offers a classic continental breakfast
-              experience, complete with a fresh fruit platter that features a
+              experience, complete with fresh brewed coffee, fresh fruit platter that features a
               colorful array of seasonal fruits. This combination provides a
               light and refreshing start to the day, perfect for any morning
               event or gathering.
@@ -536,12 +560,12 @@
           </div>
           <div class="menu-item-large">
             <img
-              src="Cleo Menu Pics/IMG-20240923-WA0016.jpg?height=200&width=300"
-              alt="Breakfast Assorted Pastry Platter"
+              src="Cleo Menu Pics\IMG-20240923-WA0020.jpg?height=200&width=300"
+              alt="Breakfast Pastry Platter"
             />
-            <h3>Breakfast Assorted Pastry Platter</h3>
+            <h3>Breakfast Pastry Platter</h3>
             <p>
-              Our breakfast assorted pastry platter offers a delightful
+              Our breakfast pastry platter offers a delightful
               selection of freshly baked pastries, perfect for starting the day
               on a delicious note. Featuring a variety of danishes, muffins, and
               other breakfast favorites, this platter caters to different
