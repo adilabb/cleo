@@ -44,7 +44,8 @@
         justify-content: center;
         width: 100%;
         padding: 20px;
-
+        box-sizing: border-box;
+        align-items: center;
         border-radius: 15px;
       }
 
@@ -53,8 +54,10 @@
       }
 
       .qr-code {
-        max-width: 150px;
-        margin: 0;
+        max-width: 50px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
@@ -80,9 +83,8 @@
         text-align: center;
       }
       p {
-       padding: 10px;
+        padding: 10px;
         margin-bottom: 1rem;
-        
       }
       .qr-code {
         max-width: 350px;
@@ -126,6 +128,12 @@
           padding: 0.5rem 1rem;
           font-size: 1rem;
         }
+
+        .qr-code-container {
+          padding: 10px;
+        }
+
+       
       }
       .food-grid {
         display: grid;
@@ -195,8 +203,6 @@
         }
       }
 
-
-
       /* Modify this media query */
       @media (max-width: 1200px) {
         .container {
@@ -215,7 +221,6 @@
           text-align: left;
         }
       }
-
 
       /* Add this new media query for very small screens */
       /* @media (max-width: 500px) {
@@ -244,15 +249,10 @@
   </head>
   <body>
     <div class="container">
-      
       <div class="left-column">
         <div>
           <div class="logo-container">
-            <img
-              src="logo.jpg"
-              alt="Cafe Cleo Logo"
-              class="logo"
-            />
+            <img src="logo.jpg" alt="Cafe Cleo Logo" class="logo" />
           </div>
           <div class="shadow">
             <h1>
@@ -272,10 +272,8 @@
             guests, making Cafe Cleo the perfect choice for businesses seeking
             exceptional catering that aligns with their professional needs.
           </p>
-         
-          <p>
 
-           
+          <p>
             Turn your business event into an extraordinary experience with Cafe
             Cleo's catering services. From elegant corporate luncheons to
             flawless presentations, we handle every detail with perfection.
@@ -322,7 +320,7 @@
             alt="Food skewers"
             class="food-item"
           />
-          
+
           <!-- Sandwiches and Wraps -->
           <img
             src="Cleo Menu Pics\landing\mini sandwich.jpg"
@@ -344,7 +342,7 @@
             alt="Assorted wraps"
             class="food-item"
           />
-          
+
           <!-- Pastries and Baked Goods -->
           <img
             src="Cleo Menu Pics\landing\assorted pastries.jpg"
@@ -371,7 +369,7 @@
             alt="Assorted pastries"
             class="food-item"
           />
-          
+
           <!-- Fruits and Fruit Platters -->
           <img
             src="Cleo Menu Pics\landing\fruits.jpg"
@@ -393,14 +391,14 @@
             alt="Fruit platter"
             class="food-item"
           />
-          
+
           <!-- Desserts -->
           <img
             src="Cleo Menu Pics\landing\brownies.jpg"
             alt="Chocolate brownies"
             class="food-item"
           />
-          
+
           <!-- Savory Items -->
           <img
             src="Cleo Menu Pics\landing\quinch.jpg"
