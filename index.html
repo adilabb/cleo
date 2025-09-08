@@ -230,29 +230,31 @@
         }
       }
 
-      /* Add this new media query for very small screens */
-      /* @media (max-width: 500px) {
-        .container {
-          padding: 0 0.25rem;
-        }
-        .left-column{
-          margin-right: 400px;
-          padding: 1rem 5rem 1rem 5rem;
-        }
-        .right-column {
-          padding: 1rem 0.25rem;
-        }
-        .food-grid {
-          grid-template-columns: repeat(1, 1fr);
-          
-        }
-        h1, h2 {
-          font-size: 1.2rem;
-        }
-        p {
-          font-size: 0.9rem;
-        }
-      } */
+      .reviews-container {
+   
+        margin-top: 2rem; /* Space above the reviews section */
+        padding: 1rem; /* Padding for aesthetics */
+        background-color: #fff; /* White background for contrast */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+      }
+
+      .reviews-section h2 {
+        color: #8b4513; /* Match the theme color */
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .review {
+        margin: 1rem 0; /* Space between reviews */
+        font-style: italic; /* Italicize review text */
+      }
+
+      .review span {
+        display: block; /* Make the name appear on a new line */
+        color: #a52a2a; /* Match the theme color */
+        font-weight: bold; /* Bold for emphasis */
+      }
 
       .address {
         text-align: center;
@@ -270,7 +272,11 @@
       <div class="left-column">
         <div>
           <div class="logo-container">
-            <img src="logo.jpg" alt="Cafe Cleo Logo" class="logo" />
+            <img
+              src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/logo.jpg"
+              alt="Cafe Cleo Logo"
+              class="logo"
+            />
           </div>
 
           <div class="address">
@@ -300,7 +306,7 @@
           </p>
           <div class="qr-code-container">
             <img
-              src="Cleo Menu Pics\landing\contact.webp"
+              src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/contact.webp"
               alt="QR Code for Cafe Cleo Catering"
               class="qr-code"
             />
@@ -308,137 +314,165 @@
         </div>
       </div>
       <div class="right-column">
-        <div
+        <!-- <div
           style="text-align: center; padding-top: 1rem; padding-bottom: 1rem"
         >
-          <button
+          <a
+            href="/catering-menu"
             class="catering-menu-btn"
-            onclick="window.location.href='menu.html'"
-            style="font-size: 1.2em"
+            style="
+              font-size: 1.2em;
+              text-decoration: none;
+              display: inline-block;
+            "
           >
             CATERING MENU
-          </button>
-        </div>
+          </a>
+        </div> -->
         <div class="food-grid">
           <!-- Appetizers and Platters -->
           <img
-            src="Cleo Menu Pics\landing\appetrizer.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/quinch.jpg"
             alt="Appetizer platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\platter.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/platter.jpg/:/rs=w:1440,h:1440"
             alt="Food platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\skewers.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/skewers.jpg/:/rs=w:1440,h:1440"
             alt="Food skewers"
             class="food-item"
           />
 
           <!-- Sandwiches and Wraps -->
           <img
-            src="Cleo Menu Pics\landing\mini sandwich.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/mini%20sandwich.jpg/:/rs=w:1440,h:1440"
             alt="Mini sandwiches"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\sandwich.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/sandwich.jpg/:/rs=w:1440,h:1440"
             alt="Sandwich platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\wraps ham.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/wraps%20ham.jpg/:/rs=w:1440,h:1440"
             alt="Ham wraps"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\wraps.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/crossiant.jpg/:/rs=w:1440,h:1440"
             alt="Assorted wraps"
             class="food-item"
           />
 
           <!-- Pastries and Baked Goods -->
           <img
-            src="Cleo Menu Pics\landing\assorted pastries.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/assorted%20pastries.jpg/:/rs=w:1440,h:1440"
             alt="Assorted pastries"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\crossiant.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/crossiant2.jpg/:/rs=w:1440,h:1440"
             alt="Croissants"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\crossiant2.jpg"
-            alt="Croissants"
+          src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/muffins.jpg/:/rs=w:1440,h:1440
+          alt="Muffins" class="food-item" />
+          <img
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/wraps.jpg/:/rs=w:1440,h:1440"
+            alt="Wraps"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\muffins.jpg"
-            alt="Assorted muffins"
-            class="food-item"
-          />
-          <img
-            src="Cleo Menu Pics\landing\pastries.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/pastries.jpg"
             alt="Assorted pastries"
             class="food-item"
           />
 
           <!-- Fruits and Fruit Platters -->
           <img
-            src="Cleo Menu Pics\landing\fruits.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/fruits.jpg"
             alt="Fresh fruit platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\pastries and fruits.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/pastries and fruits.jpg"
             alt="Pastries and fruits platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\fruits and bread.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/fruits and bread.jpg"
             alt="Fruits and bread platter"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\fruits platter 2.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/fruits platter 2.jpg"
             alt="Fruit platter"
             class="food-item"
           />
 
           <!-- Desserts -->
           <img
-            src="Cleo Menu Pics\landing\brownies.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/brownies.jpg"
             alt="Chocolate brownies"
             class="food-item"
           />
 
           <!-- Savory Items -->
           <img
-            src="Cleo Menu Pics\landing\quinch.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/quinch.jpg"
             alt="Quiche"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\samosa.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/samosa.jpg"
             alt="Samosas"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\veggie samoas.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/veggie samoas.jpg"
             alt="Vegetable samosas"
             class="food-item"
           />
           <img
-            src="Cleo Menu Pics\landing\parathas.jpg"
+            src="https://img1.wsimg.com/isteam/ip/b5fab369-7b7e-429a-8c16-514817199bd9/parathas.jpg"
             alt="Parathas"
             class="food-item"
           />
         </div>
+        <!-- Add Reviews Section -->
+        <div class="reviews-container">
+          <h2>What Our Clients Say</h2>
+          <div class="reviews-section">
+            <div class="review">
+              <p>
+                "Thank you, Jon, for providing us with such great food. It was
+                all delicious! It was a pleasure dealing with you. I received
+                many great comments on how good all the food was!! I'll be sure
+                to spread the word!!"
+              </p>
+              <span>- Lucy</span>
+            </div>
+            <div class="review">
+              <p>
+                "Thank you Jon, everything was delicious. I am not in the
+                Mississauga office very often as my office is downtown Toronto,
+                but will pass the word and will definitely use your service for
+                any future events that I am planning at Prologis."
+              </p>
+              <span>- Angela</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- End of Reviews Section -->
 
     <div class="popup" id="imagePopup">
       <div class="popup-content">
